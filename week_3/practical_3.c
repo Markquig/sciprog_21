@@ -17,6 +17,7 @@ double trapezoid (double start, double end, int count) {
     sum += calc;
     calc = function (end);
     sum += calc;
+    //printf ("\tsum = %f\n", sum);
     
     int i;
     double x;   //value of x for y to be calculated at
@@ -24,13 +25,14 @@ double trapezoid (double start, double end, int count) {
         calc = function (x);
         sum += (2*calc);
     }
+    //printf ("\tsum = %f\n", sum);
 
     double ret = (step/2) * sum;
     return ret;
 }//*/
 
 int main (int argc, char *argv[]) {
-    printf ("Hello!\n");
+    //printf ("Hello!\n");
     
     /*  used to test values returned by function()
     double x = M_PI/3;
@@ -59,9 +61,11 @@ int main (int argc, char *argv[]) {
 
     
     double ans = trapezoid (0, M_PI/3, 12);
-    printf ("ans = %f\n", ans);
+    printf ("area = %f\n", ans);
 
     
     
     return 0;
 }
+
+//gcc practical_3.c -o p_3.out -lm

@@ -1,13 +1,16 @@
 //#include <stdlib.h>
 #include <stdio.h>
 
-int fibonacci_iterate (int f_n_1, int f_n)
-/*provides the next step in a fibonacci sequence given
-  f_n: the value of the previous step, that is step n
-  f_n_1: the value of the step prior to that, that is n-1
+void fibonacci_iterate (int* fn_1, int* fn)
+/*provides the next step in a fibonacci sequence given:
+  fn: point to the value of the previous step, that is step n
+  fn_1: point to the value of the step prior to that, that is n-1
  */
 {
-    return f_n_1 + f_n;
+    //change value of each object pointed too
+    int hold = *fn;
+    *fn += *fn_1;
+    *fn_1 = hold;
 }
 
 int main (int argc, char *argv[]) {
@@ -24,23 +27,20 @@ int main (int argc, char *argv[]) {
     printf("\noutput:\n");
     int f_0 = 0;    //step n=0
     printf ("\tf_0 = %d\n", f_0);
-    if (n == 0) {   //exit when n=0
+    if (n == 0) {   //exit if n=0
         return 0;
     }
     
     int f_1 = 1;    //step n=1
     printf ("\tf_1 = %d\n", f_1);
-    if (n == 1) {   //exit when n=1
+    if (n == 1) {   //exit if n=1
         return 0;
     }
-
-    int i;          //used for ittereating over
-    int f_hold;     //used to hold new value of itteration
-    for (i = 1; i < n; i++){
-        f_hold = fibonacci_iterate (f_0, f_1);  //find new value
-        printf ("\tf_%d = %d\n", i+1, f_hold);  //print output
-        f_0 = f_1;      //change values
-        f_1 = f_hold;
+    
+    int i;
+    for (i = 1; i < n; i++){                //iterate until nth element reached
+        fibonacci_iterate (&f_0, &f_1);     //update values
+        printf ("\tf_%d = %d\n", i+1, f_1); //print output
     }
     return 0;
 }
