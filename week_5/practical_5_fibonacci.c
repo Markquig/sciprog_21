@@ -1,4 +1,3 @@
-//#include <stdlib.h>
 #include <stdio.h>
 
 void fibonacci_iterate (int* fn_1, int* fn)
@@ -44,3 +43,6 @@ int main (int argc, char *argv[]) {
     }
     return 0;
 }
+
+//gcc practical_5_fibonacci.c -o p_5_fibonacci.out -Wall
+//./p_5_fibonacci.out 
