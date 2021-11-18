@@ -27,15 +27,13 @@ int main(void) {
        
 
 /* Complete the expression */
-/* numdigits = ceil( ... );
-   printf("The number of digits is %d\n",numdigits);
-*/
-    //numdigits = ceil ( logf()/)
-
+   numdigits = ceil ( logf(fnum)/logf(2));
+   printf("The number of digits is %d\n", numdigits);
+    
    printf("inum=%d,  fnum=%f, inum in binary=%s\n",
       inum,fnum,binnum);
 
 }
 
 
-//gcc -o Conversion_c Conversion.c -lm
+//gcc Conversion.c -o Conversion.out -lm
