@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include <stdlib.h>
-//#include <fstream>
 #include <time.h>       // for clock_t, clock(), CLOCKS_PER_SEC
 
 #include "magic_square.h"

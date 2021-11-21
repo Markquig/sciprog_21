@@ -78,4 +78,5 @@ int main (int argc, char *argv[]) {
 }
 
 //gcc practical_4.c -o p_4.out -lm
+//./p_4.out
 

@@ -78,3 +78,6 @@ int main (int agrc, char* argv[]){
     
     return 0;
 }
+
+//gcd practical_6.c -o p_6.out
+//./p_6.out

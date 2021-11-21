@@ -69,3 +69,4 @@ int main (int argc, char *argv[]) {
 }
 
 //gcc practical_3.c -o p_3.out -lm
+//./p_3.out

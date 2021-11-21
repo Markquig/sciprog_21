@@ -37,3 +37,4 @@ int main(void) {
 
 
 //gcc Conversion.c -o Conversion.out -lm
+//./Conversion.out
